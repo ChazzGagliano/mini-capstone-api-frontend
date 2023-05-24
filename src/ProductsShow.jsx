@@ -18,6 +18,7 @@ export function ProductsShow(props) {
       <p>Description: {props.product.description}</p>
       <p>Image: {props.product.images[0].url}</p>
   
+  
       <form onSubmit={handleSubmit}>
          <div>
            Name: <input defaultValue={props.product.name} name="name" type="text" />
@@ -29,7 +30,7 @@ export function ProductsShow(props) {
            Description: <input defaultValue={props.product.description} name="description" type="text" />
          </div>
          <div>
-           Image: <input defaultValue={props.product.images[0].url}name="image" type="text" />
+           Image: <input defaultValue={props.product.images && props.product.images[0].url}name="image" type="text" />
          </div>
       
          <button type="submit">Update photo</button>
